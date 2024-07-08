@@ -1,0 +1,201 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css';
+
+html, body, .background {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+a {
+  text-decoration: none;
+  color:#fceaea;
+}
+
+h1 {
+  color: #616161;
+  font-size: 2.5rem;
+  text-shadow: #e0e0e0 2px 2px 0;
+}
+
+html {
+  background: #fff;
+}
+
+body {
+  background: #eee;
+  background: linear-gradient(0deg, rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0));
+}
+
+button { 
+  background: #d7c4c4;
+  box-shadow: -5px -5px 10px #7878ab80, 5px 5px 10px #aaaacc40, 7px 7px 15px #aaaacc80, -7px -7px 15px #FFFFFF;
+  border-radius: 32px;
+  border: 1px solid#b7d5ff;
+  padding: 9px 24px;
+}
+
+footer {
+  border-top: 3px solid #b7d5ff;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  width: 300px;
+}
+
+input {
+  padding: 10px 26px;
+  border-radius: 5px;
+  border: 1px solid #b7d5ff;
+  height: 25px;
+  background:#d7c4c4;
+  box-shadow: inset -2px -2px 4px #2d2e2e2f,
+    inset 2px 2px 4px #b7d5ff,
+    inset 5px 5px 10px #ffff,
+     inset -5px -5px 10px #2d2e2e2f;
+  border-radius: 40px;
+  margin-bottom: 25px;
+}
+
+.app-header {
+text-align: center;
+}
+
+.background {
+  background: #eee;
+  background: linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  background: #eee;
+  background: linear-gradient(240deg, rgba(150, 50, 50, 0.3), rgba(0, 0, 200, 0));
+}
+nav ul {
+  margin: 20px 20px 0 20px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+nav li a {
+  display: block;
+  width: 50px;
+  text-align: center;
+  color: #aaa;
+  cursor: pointer;
+}
+nav li a:hover {
+  color: #444;
+}
+nav li a.active {
+  color: #4444ff;
+}
+
+#card {
+  box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 300px;
+  padding: 0;
+  height: 400px;
+  min-height: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+#card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  color: #888;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: color 2s ease;
+}
+.thunder #card .details {
+  color: #ddd;
+}
+#card .details .right {
+  text-align: right;
+}
+#card .details #date {
+  margin: 4px 0;
+}
+#card .details #summary {
+  font-weight: 600;
+  font-size: 22px;
+}
+#card .details .temp {
+  font-size: 30px;
+  line-height: 60px;
+}
+#card .details .temp span {
+  font-size: 18px;
+  line-height: 30px;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+.weather {
+  background-color: #DAE3FD;
+  transition: background-color 2s ease;
+}
+.thunder .weather {
+  background-color: #9FA4AD;
+}
+
+.temperatureBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.rain .weather {
+  background-color: #D8D8D8;
+}
+.sun .weather {
+  background-color: #ccccff;
+}
+.weather #inner {
+  background-color: white;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+.weather .cloud {
+  transition: fill 2s ease;
+}
+.weather #cloud1 {
+  fill: #efefef;
+}
+.thunder .weather #cloud1 {
+  fill: #9FA4AD;
+}
+.weather #cloud2 {
+  fill: #E6E6E6;
+}
+.thunder .weather #cloud2 {
+  fill: #8B8E98;
+}
+.weather #cloud3 {
+  fill: #D5D5D5;
+}
+.thunder .weather #cloud3 {
+  fill: #7B7988;
+}
+
+#outer, #back {
+  position: fixed;
+  pointer-events: none;
+}
